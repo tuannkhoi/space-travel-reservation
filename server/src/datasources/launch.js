@@ -1,4 +1,4 @@
-const { RESTDataSource } = require('apollo-data-source');
+const { RESTDataSource } = require('apollo-datasource-rest');
 
 class LaunchAPI extends RESTDataSource {
 	constructor() {
