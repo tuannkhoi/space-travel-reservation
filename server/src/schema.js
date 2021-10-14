@@ -21,7 +21,7 @@ const typeDefs = gql`
 	}
 	type Mutation { # allow clients to modify data
 		bookTrips(launchIds: [ID]!): TripUpdateResponse!
-		cancelTrip(launchIds: ID!): TripUpdateResponse!
+		cancelTrip(launchId: ID!): TripUpdateResponse!
 		login(email: String): User
 
 	}
