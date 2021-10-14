@@ -12,10 +12,8 @@ const typeDefs = gql`
 		launch(id: ID!): Launch #return a single Launch that matches the id
 		me: User #return details of the currently logged in User
 	}
-	"""
-	Simple wrapper around our list of launches that contains a cursor to the
-	last item in the list. Pass this cursor to the launches query to fetch results after these
-	"""
+	# Simple wrapper around our list of launches that contains a cursor to the
+	# last item in the list. Pass this cursor to the launches query to fetch results after these
 	type LaunchConnection {
 		cursor: String!
 		hasMore: Boolean!
@@ -23,7 +21,7 @@ const typeDefs = gql`
 	}
 	type Mutation { # allow clients to modify data
 		bookTrips(launchIds: [ID]!): TripUpdateResponse!
-		cancelTrips(launchIds: ID!): TripUpdateResponse!
+		cancelTrip(launchIds: ID!): TripUpdateResponse!
 		login(email: String): User
 
 	}
